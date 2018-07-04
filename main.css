@@ -3,6 +3,8 @@ body {
     padding: 0;
     margin: 0;
     background: #d5e1df;
+    display: flex;
+    flex-direction: column;
 }
 header {
     margin: 0;
@@ -26,11 +28,11 @@ h3 {
 }
 
 #container {
-    height: 90vh;
     display:flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin-top: 5em;
 }
 
 #card {
