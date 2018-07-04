@@ -1,0 +1,48 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #d5e1df;
+}
+header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0.2em;
+    background: rgb(147, 194, 157);
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container {
+    height: 90vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: white;
+    padding: 2em 4em;
+    border-radius: 0.3em;
+}
+
+ul {
+    list-style-type: none;
+}
