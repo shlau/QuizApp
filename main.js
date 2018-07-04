@@ -10,7 +10,7 @@ window.onload = function() {
                 c:"San Francisco",
                 d:"Indianapolis"
             },
-            correct: "Sacramento"
+            correct: "a"
         },
         {
             question: "What is 2+2?",
@@ -21,7 +21,7 @@ window.onload = function() {
                 c:"4",
                 d:"14"
             },
-            correct: "4"
+            correct: "c"
         },
         {
             question: "When was the first moon landing?",
@@ -32,15 +32,16 @@ window.onload = function() {
                 c:"1945",
                 d:"1983"
             },
-            correct: "1969"
+            correct: "a"
         }
     ]
 
 
     const quizContents = []
-    
+    const card = document.getElementById("card");
+    const res = document.getElementById("results");
     function buildQuiz() {
-        const card = document.getElementById("card");
+
         quiz.forEach((currentQuestion,index) => {
             currQ = currentQuestion['question'];
             qHtml = `<div class="question"><p> ${currQ} </p></div>`
@@ -58,8 +59,18 @@ window.onload = function() {
         card.innerHTML += `<button class="submit">Submit</button>`
     }
     function showResult() {
-        
+        let numCorrect = 0;
+        quiz.forEach((currentQuestion,index) => {
+            const correctAns = currentQuestion['correct'];
+            const selected = document.querySelector(`input[name="question${index}"]:checked`);
+            if(selected.value === correctAns) {
+                numCorrect += 1;
+            }
+        });
+        results.innerHTML = `<p>correct : ${numCorrect}</p>`;
     }
     buildQuiz();
-    showResult();
+
+    const submit = document.querySelector("button");
+    submit.addEventListener('click',showResult);
 }
